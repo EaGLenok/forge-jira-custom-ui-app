@@ -1,0 +1,17 @@
+modules:
+  jira:globalPage:
+    - key: forge-jira-custom-ui-app-hello-world-page
+      resource: main
+      resolver:
+        function: resolver
+      title: forge-jira-custom-ui-app
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/dist
+app:
+  runtime:
+    name: nodejs22.x
+  id: ari:cloud:ecosystem::app/dc0ba2b1-deef-480a-8c8a-100b25c79935
